@@ -25,6 +25,19 @@ st.caption(
 R_priv = st.slider("Incassi PRIVATI annui (includono 4% integrativo) €", 0, 85000, 24000, 500)
 R_pa   = st.slider("Incassi PA annui (includono 2% integrativo) €", 0, 85000, 36000, 500)
 
+# --- Warning regime forfettario (soglie 85k / 100k) ---
+incassi_tot = R_priv + R_pa
+st.info(f"Incassi totali (inclusa rivalsa integrativo): {incassi_tot:,.0f} €".replace(",", "."))
+
+if incassi_tot > 100000:
+    st.error("⚠️ Superi €100.000: in genere si esce dal forfettario in corso d'anno (attenzione a IVA/adempimenti).")
+elif incassi_tot > 85000:
+    st.warning("⚠️ Superi €85.000: in genere si esce dal forfettario dall'anno successivo (se resti ≤ €100.000).")
+else:
+    st.success("✅ Entro il limite €85.000 per permanenza nel forfettario.")
+
+
+
 spese_studio = st.slider("Spese fisse di studio annue €", 0, 50000, 12000, 500)
 soggettivo_pct = st.slider("% contributo soggettivo ENPAP", 10, 30, 24, 1)
 
