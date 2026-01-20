@@ -25,7 +25,20 @@ st.caption(
 # =========================
 # Input UI
 # =========================
-incassi_R = st.slider("Incassi annui (R) € — includono già il 2% integrativo", 0, 85000, 48000, 500)
+R_priv = st.slider("Incassi PRIVATI annui (includono 4% integrativo) €", 0, 200000, 40000, 500)
+R_pa   = st.slider("Incassi PA annui (includono 2% integrativo) €", 0, 200000, 12000, 500)
+
+# basi
+base_priv = R_priv / 1.04 if R_priv > 0 else 0.0
+base_pa   = R_pa   / 1.02 if R_pa > 0 else 0.0
+
+# integrativi
+integr_priv = 0.04 * base_priv
+integr_pa   = 0.02 * base_pa
+integrativo_tot = integr_priv + integr_pa
+
+# quota integrativo che va a montante (dal tuo testo: 2% "al montante" solo quando l'integrativo è 4%)
+quota_montante_integr = 0.02 * base_priv   # = 50% di integr_priv
 spese_studio = st.slider("Spese imputabili all'attività professionale (affitto studio, utenze, corsi ecc...)annue €", 0, 50000, 12000, 500)
 soggettivo_pct = st.slider("% contributo soggettivo ENPAP", 10, 30, 24, 1)
 
