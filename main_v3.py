@@ -38,7 +38,7 @@ else:
 
 
 
-spese_studio = st.slider("Spese fisse di studio annue €", 0, 50000, 12000, 500)
+spese_studio = st.slider("Spese annue relative alla professione (affitto, utenze, corsi, spostamenti)  €", 0, 50000, 12000, 500)
 soggettivo_pct = st.slider("% contributo soggettivo ENPAP", 10, 30, 24, 1)
 
 st.divider()
