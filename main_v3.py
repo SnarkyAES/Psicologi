@@ -23,9 +23,9 @@ st.caption(
 # INPUT
 # =========================
 R_priv = st.slider("Incassi PRIVATI annui (includono 4% integrativo) €", 0, 85000, 24000, 500)
-R_pa   = st.slider("Incassi PA annui (includono 2% integrativo) €", 0, 85000, 12000, 500)
+R_pa   = st.slider("Incassi PA annui (includono 2% integrativo) €", 0, 85000, 36000, 500)
 
-spese_studio = st.slider("Spese fisse di studio annue €", 0, 50000, 0, 500)
+spese_studio = st.slider("Spese fisse di studio annue €", 0, 50000, 12000, 500)
 soggettivo_pct = st.slider("% contributo soggettivo ENPAP", 10, 30, 24, 1)
 
 st.divider()
