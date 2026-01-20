@@ -22,9 +22,9 @@ st.caption(
 # =========================
 # Input UI
 # =========================
-incassi_R = st.slider("Incassi annui (includono 2% integrativo) €", 0, 200000, 52000, 500)
-spese_studio = st.slider("Spese fisse di studio annue €", 0, 100000, 0, 500)
-soggettivo_pct = st.slider("% contributo soggettivo ENPAP", 10, 30, 10, 1)
+incassi_R = st.slider("Incassi annui (includono 2% integrativo) €", 0, 85000, 48000, 500)
+spese_studio = st.slider("Spese fisse di studio annue €", 0, 30000, 0, 500)
+soggettivo_pct = st.slider("% contributo soggettivo ENPAP", 10, 30, 20, 1)
 
 st.divider()
 
