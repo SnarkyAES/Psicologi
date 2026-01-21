@@ -24,9 +24,9 @@ st.caption(
 # =========================
 # INPUT
 # =========================
-incassi_R = st.slider("Incassi annui (R) € — includono già il 2% integrativo ENPAP", 0, 200000, 52000, 500)
-spese_studio = st.slider("Spese fisse di studio annue €", 0, 100000, 0, 500)
-soggettivo_pct = st.slider("% contributo soggettivo ENPAP", 10, 30, 10, 1)
+incassi_R = st.slider("Incassi annui (R) € — includono già il 2% integrativo ENPAP", 0, 85000, 52000, 500)
+spese_studio = st.slider("Spese fisse di studio annue €", 0, 50000, 12000, 500)
+soggettivo_pct = st.slider("% contributo soggettivo ENPAP", 10, 30, 18, 2)
 
 # --- Warning regime forfettario (soglie 85k / 100k) ---
 st.divider()
